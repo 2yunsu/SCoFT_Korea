@@ -9,7 +9,7 @@ class DreamsimFeatureLoss(torch.nn.Module):
         super(DreamsimFeatureLoss, self).__init__()
         device = 'cuda' if torch.cuda.is_available() else 'cpu'
         self.model, preprocess = dreamsim(pretrained=True)
-        self.model = self.model.to(device, dtype=torch.float16)
+        self.model = self.model.to(device, dtype=torch.float32)
         self.model.eval()
 
         self.transform = transforms.Compose([

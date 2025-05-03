@@ -2,7 +2,8 @@ import torch
 from diffusers import StableDiffusionPipeline, DPMSolverMultistepScheduler
 
 model_base = "CompVis/stable-diffusion-v1-4"
-lora_model_path = "/ocean/projects/cis230017p/zliug/m3c_summer/m3c-diffusers/examples/text_to_image/sd-China-baseline"
+# lora_model_path = "/ocean/projects/cis230017p/zliug/m3c_summer/m3c-diffusers/examples/text_to_image/sd-China-baseline"
+lora_model_path = "/home/SCoFT/output/scoft-Korean-culture"
 
 pipe = StableDiffusionPipeline.from_pretrained(model_base, torch_dtype=torch.float16)
 pipe.scheduler = DPMSolverMultistepScheduler.from_config(pipe.scheduler.config)
@@ -12,7 +13,7 @@ pipe.to("cuda")
 
 generator = [torch.Generator(device="cuda").manual_seed(i) for i in [10551, 8288, 9678, 22969]]
 
-test_prompt ="people with prosthetics at home"
+test_prompt ="Generate two people wearing traditional clothing, in Korea"
 
 for i in range(4):
     generator_i = generator[i]
