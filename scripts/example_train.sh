@@ -19,9 +19,6 @@ accelerate launch --mixed_precision="fp16"  ../train.py \
   --output_dir="../output/scoft-Korean-culture" \
   --checkpointing_steps=200 \
   --validation_prompt="Generate two people wearing traditional clothing, in Korea" \
-  --validation_prompt="Generate two people wearing traditional clothing, in Korea" \
-  --validation_prompt="Generate two people wearing traditional clothing, in Korea" \
-  --validation_prompt="Generate two people wearing traditional clothing, in Korea" \
   --perceptualloss \
   --dreamsimloss \
   --recordfirstgradient \
