@@ -17,7 +17,7 @@ accelerate launch --mixed_precision="fp16"  ../train.py \
   --max_grad_norm=1 \
   --lr_scheduler="cosine" --lr_warmup_steps=0 \
   --output_dir="/home/data/yunsu/SCoFT/output/scoft-Korean-culture_merged_neg" \
-  --checkpointing_steps=2000 \
+  --checkpointing_steps=1000 \
   --validation_prompt="Generate two people wearing traditional clothing, in Korea" \
   --perceptualloss \
   --dreamsimloss \

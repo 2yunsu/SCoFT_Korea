@@ -6,7 +6,7 @@ accelerate launch --mixed_precision="fp16"  ../train.py \
   --train_data_dir=$TRAIN_DIR \
   --resume_from_checkpoint="latest" \
   --caption_column="text" \
-  --blip_caption_column="blip2_text" \
+  --blip_caption_column="blip_text" \
   --negative_example_column="negative_imgpath" \
   --dataloader_num_workers=8 \
   --resolution=512 --center_crop --random_flip \
@@ -17,7 +17,7 @@ accelerate launch --mixed_precision="fp16"  ../train.py \
   --max_grad_norm=1 \
   --lr_scheduler="cosine" --lr_warmup_steps=0 \
   --output_dir="/home/data/yunsu/SCoFT/output/scoft-Korean-culture_face_neg" \
-  --checkpointing_steps=2000 \
+  --checkpointing_steps=1000 \
   --validation_prompt="Generate two people wearing traditional clothing, in Korea" \
   --perceptualloss \
   --dreamsimloss \

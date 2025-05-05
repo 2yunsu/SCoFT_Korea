@@ -1,22 +1,48 @@
 import torch
 from diffusers import StableDiffusionPipeline, DPMSolverMultistepScheduler
+import os
+from tqdm import tqdm
 
 model_base = "CompVis/stable-diffusion-v1-4"
-# lora_model_path = "/ocean/projects/cis230017p/zliug/m3c_summer/m3c-diffusers/examples/text_to_image/sd-China-baseline"
-lora_model_path = "/home/SCoFT/output/scoft-Korean-culture"
+lora_model_paths = [
+    "/home/data/yunsu/SCoFT/output/scoft-Korean-culture_face_neg",
+    "/home/data/yunsu/SCoFT/output/scoft-Korean-culture_GQA_neg",
+    "/home/data/yunsu/SCoFT/output/scoft-Korean-culture_merged_neg",
+    "/home/data/yunsu/SCoFT/output/scoft-Korean-culture_vanila_neg",
+]
+
+output_dir = "/home/SCoFT/test_100step"
+os.makedirs(output_dir, exist_ok=True)
+
+test_prompts = [
+    "Generate two people wearing traditional clothing, in Korea",
+    "Generate Korean male face",
+    "Generate Korean female face",
+    "Generate Korean young boy face",
+    "Generate Korean young girl face",
+    "Generate a man wearing traditional clothing next to a traditional house, in Korea",
+    "Generate a Korean family portrait, in a traditional house",
+    "Generate a Korean traditional food",
+    "Generate Kimchi on the right side of Samgyetang",
+    "Generate a Korean King"
+    "Korean traditional hat",
+    "Kimchi stew"
+]
 
 pipe = StableDiffusionPipeline.from_pretrained(model_base, torch_dtype=torch.float16)
 pipe.scheduler = DPMSolverMultistepScheduler.from_config(pipe.scheduler.config)
-
-pipe.unet.load_attn_procs(lora_model_path)
 pipe.to("cuda")
 
-generator = [torch.Generator(device="cuda").manual_seed(i) for i in [10551, 8288, 9678, 22969]]
-
-test_prompt ="Generate two people wearing traditional clothing, in Korea"
-
-for i in range(4):
-    generator_i = generator[i]
-    # use the weights from the fully finetuned LoRA model
-    image = pipe(test_prompt, generator=generator_i, num_inference_steps=50, guidance_scale=4.5, cross_attention_kwargs={"scale":1.0}).images[0]    
-    image.save(lora_model_path+"/test_image"+str(i)+".png")
+for lora_path in tqdm(lora_model_paths):
+    pipe.unet.load_attn_procs(lora_path)
+    for idx, prompt in enumerate(test_prompts):
+        generator = torch.Generator(device="cuda").manual_seed(10000 + idx)
+        image = pipe(
+            prompt,
+            generator=generator,
+            num_inference_steps=50,
+            guidance_scale=4.5,
+            cross_attention_kwargs={"scale": 1.0}
+        ).images[0]
+        lora_name = os.path.basename(lora_path)
+        image.save(os.path.join(output_dir, f"{lora_name}_prompt{idx+1}.png"))
