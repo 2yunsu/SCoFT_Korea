@@ -1,0 +1,49 @@
+image,prompt,clip_score
+scoft-Korean-culture_merged_neg_prompt1.png,"Generate two people wearing traditional clothing, in Korea",21.1302
+scoft-Korean-culture_vanila_neg_prompt1.png,"Generate two people wearing traditional clothing, in Korea",21.3352
+scoft-Korean-culture_face_neg_prompt1.png,"Generate two people wearing traditional clothing, in Korea",21.2424
+scoft-Korean-culture_GQA_neg_prompt1.png,"Generate two people wearing traditional clothing, in Korea",21.7351
+scoft-Korean-culture_face_neg_prompt2.png,Generate Korean male face,24.4222
+scoft-Korean-culture_merged_neg_prompt2.png,Generate Korean male face,24.5794
+scoft-Korean-culture_GQA_neg_prompt2.png,Generate Korean male face,24.4161
+scoft-Korean-culture_vanila_neg_prompt2.png,Generate Korean male face,24.0771
+scoft-Korean-culture_vanila_neg_prompt3.png,Generate Korean female face,24.9226
+scoft-Korean-culture_merged_neg_prompt3.png,Generate Korean female face,25.0427
+scoft-Korean-culture_face_neg_prompt3.png,Generate Korean female face,24.7599
+scoft-Korean-culture_GQA_neg_prompt3.png,Generate Korean female face,24.8221
+scoft-Korean-culture_GQA_neg_prompt4.png,Generate Korean young boy face,22.6695
+scoft-Korean-culture_vanila_neg_prompt4.png,Generate Korean young boy face,22.5827
+scoft-Korean-culture_face_neg_prompt4.png,Generate Korean young boy face,22.4682
+scoft-Korean-culture_merged_neg_prompt4.png,Generate Korean young boy face,22.6528
+scoft-Korean-culture_face_neg_prompt5.png,Generate Korean young girl face,23.4697
+scoft-Korean-culture_merged_neg_prompt5.png,Generate Korean young girl face,23.4388
+scoft-Korean-culture_GQA_neg_prompt5.png,Generate Korean young girl face,23.312
+scoft-Korean-culture_vanila_neg_prompt5.png,Generate Korean young girl face,23.4796
+scoft-Korean-culture_face_neg_prompt6.png,"Generate a man wearing traditional clothing next to a traditional house, in Korea",19.6472
+scoft-Korean-culture_vanila_neg_prompt6.png,"Generate a man wearing traditional clothing next to a traditional house, in Korea",19.4576
+scoft-Korean-culture_GQA_neg_prompt6.png,"Generate a man wearing traditional clothing next to a traditional house, in Korea",20.0568
+scoft-Korean-culture_merged_neg_prompt6.png,"Generate a man wearing traditional clothing next to a traditional house, in Korea",19.7195
+scoft-Korean-culture_face_neg_prompt7.png,"Generate a Korean family portrait, in a traditional house",22.3015
+scoft-Korean-culture_vanila_neg_prompt7.png,"Generate a Korean family portrait, in a traditional house",22.298
+scoft-Korean-culture_merged_neg_prompt7.png,"Generate a Korean family portrait, in a traditional house",22.1787
+scoft-Korean-culture_GQA_neg_prompt7.png,"Generate a Korean family portrait, in a traditional house",22.2985
+scoft-Korean-culture_vanila_neg_prompt8.png,Generate a Korean traditional food,22.9177
+scoft-Korean-culture_face_neg_prompt8.png,Generate a Korean traditional food,22.7378
+scoft-Korean-culture_merged_neg_prompt8.png,Generate a Korean traditional food,22.9289
+scoft-Korean-culture_GQA_neg_prompt8.png,Generate a Korean traditional food,22.4907
+scoft-Korean-culture_merged_neg_prompt9.png,Generate Kimchi on the right side of Samgyetang,21.9861
+scoft-Korean-culture_face_neg_prompt9.png,Generate Kimchi on the right side of Samgyetang,21.7687
+scoft-Korean-culture_GQA_neg_prompt9.png,Generate Kimchi on the right side of Samgyetang,21.9161
+scoft-Korean-culture_vanila_neg_prompt9.png,Generate Kimchi on the right side of Samgyetang,21.8663
+scoft-Korean-culture_vanila_neg_prompt10.png,Generate a Korean King,22.3337
+scoft-Korean-culture_merged_neg_prompt10.png,Generate a Korean King,22.5577
+scoft-Korean-culture_GQA_neg_prompt10.png,Generate a Korean King,22.1773
+scoft-Korean-culture_face_neg_prompt10.png,Generate a Korean King,22.3863
+scoft-Korean-culture_face_neg_prompt11.png,Korean traditional hat,22.2541
+scoft-Korean-culture_GQA_neg_prompt11.png,Korean traditional hat,23.0565
+scoft-Korean-culture_vanila_neg_prompt11.png,Korean traditional hat,22.5579
+scoft-Korean-culture_merged_neg_prompt11.png,Korean traditional hat,23.3045
+scoft-Korean-culture_merged_neg_prompt12.png,Kimchi stew,21.2825
+scoft-Korean-culture_face_neg_prompt12.png,Kimchi stew,21.1238
+scoft-Korean-culture_GQA_neg_prompt12.png,Kimchi stew,20.8469
+scoft-Korean-culture_vanila_neg_prompt12.png,Kimchi stew,21.8831
